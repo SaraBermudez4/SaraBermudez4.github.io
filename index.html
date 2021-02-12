@@ -54,13 +54,10 @@ https://github.com/Team-Code/KA_Offline -->
             //var juego = function (){
 
             //Barcos
-            var barcos = function (numCuadrados, texto, x, y, textoX, textoY) {
+            var barcos = function (numCuadrados, x, y) {
                 this.numCuadrados = numCuadrados;
-                this.texto = texto;
                 this.x = x;
                 this.y = y;
-                this.textoX = textoX;
-                this.textoY = textoY;
                 this.arriba = false;
                 this.destruido = false;
             };
@@ -70,13 +67,11 @@ https://github.com/Team-Code/KA_Offline -->
                     for (var i = 0; i < this.numCuadrados; i++) {
                         rect(this.x, this.y + 30 * i, 30, 30);
                     }
-                    text(this.texto, this.textoX, this.textoY);
                 }
                 else {
                     for (var i = 0; i < this.numCuadrados; i++) {
                         rect(this.x + 30 * i, this.y, 30, 30);
                     }
-                    text(this.texto, this.textoX, this.textoY);
                 }
             };
 
@@ -85,15 +80,15 @@ https://github.com/Team-Code/KA_Offline -->
                     y >= this.y && y <= this.y * this.numCuadrados;
             };
 
-            var lancha = new barcos(2, "Lancha", 3, 20, 31, 15);
+            var lancha = new barcos(2, 3, 20);
             lancha.prototype = Object.create(barcos.prototype);
-            var submarino = new barcos(3, "Submarino", 80, 20, 123, 15);
+            var submarino = new barcos(3, 80, 20);
             submarino.prototype = Object.create(barcos.prototype);
-            var crucero = new barcos(3, "Crucero", 184, 20, 228, 15);
+            var crucero = new barcos(3, 184, 20);
             crucero.prototype = Object.create(barcos.prototype);
-            var acorazado = new barcos(4, "Acorazado", 288, 20, 347, 15);
+            var acorazado = new barcos(4, 288, 20);
             acorazado.prototype = Object.create(barcos.prototype);
-            var portavion = new barcos(5, "Portavion", 360, 127, 371, 292);
+            var portavion = new barcos(5, 360, 127);
             portavion.arriba = true;
             portavion.prototype = Object.create(barcos.prototype);
 
@@ -298,6 +293,11 @@ https://github.com/Team-Code/KA_Offline -->
 
             draw = function () {
                 background(122, 113, 89);
+                text("Lancha", 31, 15);
+                text("Submarino", 123, 15);
+                text("Crucero", 228, 15);
+                text("Acorazado", 347, 15);
+                text("Portavion", 371, 292);
                 fill(61, 154, 161);
                 rect(10, 57, 330, 330);
                 for (var i = 40; i < 339; i += 30) {
