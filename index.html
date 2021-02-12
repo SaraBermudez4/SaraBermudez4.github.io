@@ -68,16 +68,21 @@ https://github.com/Team-Code/KA_Offline -->
             barcos.prototype.dibujar = function () {
                 if (this.arriba) {
                     for (var i = 0; i < this.numCuadrados; i++) {
-                        rect(this.x, this.y + 27 * i, 27, 27);
+                        rect(this.x, this.y + 30 * i, 30, 30);
                     }
                     text(this.texto, this.textoX, this.textoY);
                 }
                 else {
                     for (var i = 0; i < this.numCuadrados; i++) {
-                        rect(this.x + 27 * i, this.y, 27, 27);
+                        rect(this.x + 30 * i, this.y, 30, 30);
                     }
                     text(this.texto, this.textoX, this.textoY);
                 }
+            };
+
+            barcos.prototype.isUnderMouse = function (x, y) {
+                return x >= this.x && x <= this.x + 30 * this.numCuadrados &&
+                    y >= this.y && y <= this.y * this.numCuadrados;
             };
 
             var lancha = new barcos(2, "Lancha", 3, 20, 31, 15);
@@ -88,7 +93,7 @@ https://github.com/Team-Code/KA_Offline -->
             crucero.prototype = Object.create(barcos.prototype);
             var acorazado = new barcos(4, "Acorazado", 288, 20, 347, 15);
             acorazado.prototype = Object.create(barcos.prototype);
-            var portavion = new barcos(5, "Portavion", 360, 127, 371, 280);
+            var portavion = new barcos(5, "Portavion", 360, 127, 371, 292);
             portavion.arriba = true;
             portavion.prototype = Object.create(barcos.prototype);
 
@@ -127,6 +132,7 @@ https://github.com/Team-Code/KA_Offline -->
                 return x >= this.x && x <= this.x + this.size &&
                     y >= this.y && y <= this.y + this.size;
             };
+
             var playerTurn = 0;
             var SYMBOLS = ["PLAYER1", "PLAYER2"];
             /*cuadros.prototype.onClick = function() {
@@ -207,13 +213,6 @@ https://github.com/Team-Code/KA_Offline -->
                 I[i].dibujar();
                 J[i].dibujar();
             }
-
-            /*for(var i = 1; i < 11; i++){
-                var letra = "J"+i;
-                var letra = new cuadros (50+i*27,320,30,30);
-                letra.prototype = Object.create(cuadros.prototype);
-                letra.dibujar(colores);
-            }*/
 
             //Cambiar color de los cuadros
             var golpe = 0;
@@ -348,8 +347,36 @@ https://github.com/Team-Code/KA_Offline -->
                 crucero.dibujar();
                 acorazado.dibujar();
                 portavion.dibujar();
-            };
 
+                if (mouseIsPressed) {
+                    if (lancha.isUnderMouse(mouseX, mouseY)) {
+                        //el centro de la circ. se mueve a la posición del cursor
+                        lancha.x = mouseX - 30;
+                        lancha.y = mouseY - 10;
+                    } else if (submarino.isUnderMouse(mouseX, mouseY)) {
+                        //el centro de la circ. se mueve a la posición del cursor
+                        submarino.x = mouseX - 40;
+                        submarino.y = mouseY - 10;
+                    } else if (crucero.isUnderMouse(mouseX, mouseY)) {
+                        //el centro de la circ. se mueve a la posición del cursor
+                        crucero.x = mouseX - 40;
+                        crucero.y = mouseY - 10;
+                    } else if (acorazado.isUnderMouse(mouseX, mouseY)) {
+                        //el centro de la circ. se mueve a la posición del cursor
+                        acorazado.x = mouseX - 50;
+                        acorazado.y = mouseY - 10;
+                    } else if (portavion.isUnderMouse(mouseX, mouseY)) {
+                        //el centro de la circ. se mueve a la posición del cursor
+                        portavion.x = mouseX - 15;
+                        portavion.y = mouseY - 60;
+                    }
+                    lancha.dibujar();
+                    submarino.dibujar();
+                    crucero.dibujar();
+                    acorazado.dibujar();
+                    portavion.dibujar();
+                }
+            };
             //if(stick.x >= A1.x && stick.x <= (A1.x + 40))
             //};
             //juego();
