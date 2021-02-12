@@ -348,7 +348,7 @@ https://github.com/Team-Code/KA_Offline -->
                 acorazado.dibujar();
                 portavion.dibujar();
 
-                void mousePressed() {
+                mouseDragged = function() {
                     if (lancha.isUnderMouse(mouseX, mouseY)) {
                         //el centro de la circ. se mueve a la posición del cursor
                         lancha.x = mouseX - 30;
