@@ -17,17 +17,23 @@
             </div>
         </header>
         <main>
-            <div class="portada">
-                <a class ="categoria_portada" href="index.html"><img src="D:\Reto academia geek\E-commerce\Imagenes\banner.jpg" id="imagen_bienvenida" onmouseover="this.width=1310;this.height=590;" onmouseout="this.width=1300;this.height=580;" alt="Imagen de portada" width="1300" height="580"></a>
-                <div class="texto">
-                    Tienda <br/>
-                    de ropa <br/>
-                    super cool
-                </div>
+            <div id = "contenedor">
+                <form>
+                    <h2 class="titulo">Información del pago</h2>
+                    <br/><br/>
+                    <input class="nombre" type="text" name="nombre" placeholder="Nombre completo"></input>
+                    <br/><br/>
+                    <input class="correo" type="email" name="correo" placeholder="Correo electronico"></input>
+                    <br/><br/>
+                    <input class="no_tarjeta" type="number" name="no_tarjeta" placeholder="No. de Tarjeta"></input>
+                    <br/><br/>
+                    <input class="fecha_vencimiento" type="text" name="fecha_vencimiento" placeholder="F.Vencimiento MM/AA"></input>
+                    <br/><br/>
+                    <input class="cod_verificacion" type="number" name="cod_verificacion" placeholder="CVV"></input>
+                    <br/><br/>
+                    <input class="pagar" type="button" value="Pagar" onclick="pagar()"></input>
+                </form>
             </div>
-            <a class ="categoria_portada" href="productos_mujer.html"><img src="D:\Reto academia geek\E-commerce\Imagenes\categoria_mujer.jpg" onmouseover="this.width=655;this.height=455;" onmouseout="this.width=650;this.height=450;" alt="Imagen de portada" width="650" height="450"></a>
-            <a class ="categoria_portada" href="productos_hombre.html"><img src="D:\Reto academia geek\E-commerce\Imagenes\categoria_hombre.jpg" onmouseover="this.width=655;this.height=455;" onmouseout="this.width=650;this.height=450;" alt="Imagen de portada" width="650" height="450"></a>
-            
             <div id = "contenedor">
             </div>
         </main>

@@ -1,78 +1,213 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.menu {
+    list-style: none;
+    overflow: hidden;
+}
+
+#cabecera {
+    float: right;
+}
+
+.opciones {
+    float: left;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+}
+
+.opciones a {
+    display: block;
+    padding: 15px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.opciones a:hover {
+    background: rgb(255, 255, 255);
+    text-decoration: none;
+    color: #000000;
+}
+
+header {
+    background: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+
 body {
-    background-image: url("https://i.ibb.co/bJFBPnZ/mascotas-iconos-sobre-fondo-beige-ilustraci-n-vectorial.jpg");
-    display: flex;
-    flex-direction: column;
-    background-size: 600px 600px;
-}
-
-@media only screen and (max-width: 767px) {
-    body {
-        background-image: url("https://i.ibb.co/bJFBPnZ/mascotas-iconos-sobre-fondo-beige-ilustraci-n-vectorial.jpg");
-        display: flex;
-        flex-direction: column;
-        background-size: 400px 400px;
-    }
-}
-
-main {
-    display: flex;
-    flex-direction: row;
-    flex: auto;
-}
-
-article {
-    flex: 2;
-    overflow-y: auto;
-}
-
-aside {
-    flex: 1;
-    overflow-y: auto;
-    margin-top: 50px !important;
-    border-radius: 25px;
-}
-
-#contenido {
-    z-index: 1;
-    background-color: rgb(255, 255, 255);
-    padding: 10px;
-    border-radius: 25px;
-}
-
-#menu {
-    z-index: 2;
+    background-color: rgb(253, 249, 239);
     text-align: center;
-    background-color: #f2eee3 !important;
-    padding: 10px;
-    border-radius: 25px;
-    font-family: 'Josefin Sans', sans-serif !important;
-    font-weight: 700;
 }
 
-#contenidoTweets {
-    background-color: #FFFFFF;
-    padding: 10px;
-    border-radius: 25px;
-    text-align: -webkit-center;
+#contenedor {
+    width: 700px;
+    margin-bottom: 20px;
+    padding-top: 80px;
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
 }
 
-h1 {
-    font-weight: 700 !important;
+#pie {
+    clear: both;
     text-align: center;
-    font-family: 'Josefin Sans', sans-serif !important;
-    font-size: 42px !important;
+    background: rgba(0, 0, 0, 0.9);
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    color: rgba(255, 255, 255, 0.9); ;
 }
 
-h2,
-h3 {
+/*Pagina de productos*/
+
+#categoria_opciones {
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    padding-top: 0pt;
+    padding-right: 0pt;
+    padding-bottom: 0pt;
+    padding-left: 0px;
+    list-style-type: none;
+    list-style-image: none;
+    list-style-position: outside;
+}
+
+#contenido_productos {
+    float: left;
+    width: 550px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    grid-gap: 10px;
+    width: 620px;
+}
+
+.categoria_ropa {
+    list-style: none;
     text-align: center;
-    font-family: 'system-ui', sans-serif !important;
-    font-weight: 500 !important;
 }
 
-p {
-    line-height: 130% !important;
-    font-family: 'Calibri' !important;
-    font-size: 18px !important;
-    margin-left: 10px !important;
+#menu_categoria {
+    float: left;
+    width: 350px;
+    height: 685px;
+    font-size: 30px;
+    background-color: rgb(245, 236, 206);
+}
+
+.nombre_producto, .precio_producto {
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+    text-decoration: none;
+}
+.item a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.item{
+    background: rgba(0, 0, 0, 0.9);
+}
+.precio_producto {
+    color: rgb(255, 94, 94);
+}
+
+#productos {
+    padding-left: 100px;
+}
+
+/*Pagina index*/
+
+.portada {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.texto {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    font-size: 100px;
+    font-family: fantasy;
+}
+
+.categoria_portada:hover {
+    background: rgb(250, 194, 72);
+}
+
+/*Pagina detalle de producto*/
+
+.cantidad {
+    width: 40px;
+}
+
+.cantidad, .agregar_producto {
+    list-style: none;
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+    text-align: left;
+    float: left;
+}
+
+.detalle {
+    list-style: none;
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+    text-align: left;
+}
+
+.imagen_detalle_producto {
+    float: left;
+    width: 350px;
+}
+
+.titulo_detalle_producto, .titulo {
+    font-size: 30px;
+    font-family: Arial, sans-serif;
+}
+
+.precio_detalle_producto {
+    font-size: 20px;
+}
+
+.nombre, .correo, .no_tarjeta, .fecha_vencimiento, .cod_verificacion, .pagar {
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+}
+
+.pagar, .agregar_producto, .categoria_ropa_mujer, .categoria_ropa_hombre {
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    font-family: Arial;
+    color: #fafafa;
+    font-size: 27px;
+    padding: 19px;
+    text-decoration: none;
+    background: rgba(0, 0, 0, 0.9);;
+}
+
+.pagar:hover, .agregar_producto:hover, .categoria_ropa_mujer:hover, .categoria_ropa_hombre:hover {
+    background: rgb(255, 255, 255);
+    text-decoration: none;
+    color: #000000;
+}
+
+table {
+    width: 100%;
+    font-family: sans-serif;
+}
+
+th, td {
+    width: 25%;
+    text-align: left;
 }
