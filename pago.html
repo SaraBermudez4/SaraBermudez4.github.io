@@ -1,46 +1,52 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="styles.css">
-        <script type="text/javascript" src="functions.js"></script>
-        <title>e-commerce</title>
-    </head>
-    <body>
-        <header>
-            <div id="cabecera">
-                <ul class="menu">
-                    <li class="opciones"><a href="index.html">Home</a></li>
-                    <li class="opciones"><a href="productos_mujer.html">Productos</a></li>
-                    <li class="opciones"><a href="carrito.html"><img src="Imagenes\icono_compra_2.png" width="30" height="30"/></a></li>
-                </ul>
-            </div>
-        </header>
-        <main>
-            <div id = "contenedor">
-                <form>
-                    <h2 class="titulo">Información del pago</h2>
-                    <br/><br/>
-                    <input class="nombre" type="text" name="nombre" placeholder="Nombre completo"></input>
-                    <br/><br/>
-                    <input class="correo" type="email" name="correo" placeholder="Correo electronico"></input>
-                    <br/><br/>
-                    <input class="no_tarjeta" type="number" name="no_tarjeta" placeholder="No. de Tarjeta"></input>
-                    <br/><br/>
-                    <input class="fecha_vencimiento" type="text" name="fecha_vencimiento" placeholder="F.Vencimiento MM/AA"></input>
-                    <br/><br/>
-                    <input class="cod_verificacion" type="number" name="cod_verificacion" placeholder="CVV"></input>
-                    <br/><br/>
-                    <input class="pagar" type="button" value="Pagar" onclick="pagar()"></input>
-                </form>
-            </div>
-            <div id = "contenedor">
-            </div>
-        </main>
-        <footer>
-            <div id="pie">
-                <p>Copyright 2021 by Sara Estefania Bermudez Alvarez. All Rights Reserved. <a href="https://www.facebook.com">Facebook</a> <a href="https://www.instagram.com">Instagram</a></p>
-            </div>
-        </footer>
-    </body>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="functions.js"></script>
+    <title>e-commerce</title>
+</head>
+
+<body>
+    <header>
+        <div id="cabecera">
+            <ul class="menu">
+                <li class="opciones"><a href="index.html">Home</a></li>
+                <li class="opciones"><a href="productos_mujer.html">Productos</a></li>
+                <li class="opciones"><a href="carrito.html"><img src="images\icono_compra_2.png" width="30"
+                            height="30" /></a></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <div id="contenedor">
+            <form>
+                <h2 class="titulo">Información del pago</h2>
+                <br /><br />
+                <input class="nombre" type="text" name="nombre" placeholder="Nombre completo"></input>
+                <br /><br />
+                <input class="correo" type="email" name="correo" placeholder="Correo electronico"></input>
+                <br /><br />
+                <input class="no_tarjeta" type="number" name="no_tarjeta" placeholder="No. de Tarjeta"></input>
+                <br /><br />
+                <input class="fecha_vencimiento" type="text" name="fecha_vencimiento"
+                    placeholder="F.Vencimiento MM/AA"></input>
+                <br /><br />
+                <input class="cod_verificacion" type="number" name="cod_verificacion" placeholder="CVV"></input>
+                <br /><br />
+                <input class="pagar" type="button" value="Pagar" onclick="pagar()"></input>
+            </form>
+        </div>
+        <div id="contenedor">
+        </div>
+    </main>
+    <footer>
+        <div id="pie">
+            <p>Copyright 2021 by Sara Estefania Bermudez Alvarez. All Rights Reserved. <a
+                    href="https://www.facebook.com">Facebook</a> <a href="https://www.instagram.com">Instagram</a></p>
+        </div>
+    </footer>
+</body>
+
 </html>

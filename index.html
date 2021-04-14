@@ -1,40 +1,51 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="styles.css">
-        <script type="text/javascript" src="functions.js"></script>
-        <title>e-commerce</title>
-    </head>
-    <body>
-        <header>
-            <div id="cabecera">
-                <ul class="menu">
-                    <li class="opciones"><a href="index.html">Home</a></li>
-                    <li class="opciones"><a href="productos_mujer.html">Productos</a></li>
-                    <li class="opciones"><a href="carrito.html"><img src="Imagenes\icono_compra_2.png" width="30" height="30"/></a></li>
-                </ul>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="functions.js"></script>
+    <title>e-commerce</title>
+</head>
+
+<body>
+    <header>
+        <div id="cabecera">
+            <ul class="menu">
+                <li class="opciones"><a href="index.html">Home</a></li>
+                <li class="opciones"><a href="productos_mujer.html">Productos</a></li>
+                <li class="opciones"><a href="carrito.html"><img src="images/icono_compra_2.png" alt="Icono de compra" width="30"
+                            height="30" /></a></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <div class="portada">
+            <a class="categoria_portada" href="index.html"><img src="images/banner.jpg" id="imagen_bienvenida"
+                    onmouseover="this.width=1310;this.height=590;" onmouseout="this.width=1300;this.height=580;"
+                    alt="Imagen de portada" width="1300" height="580"></a>
+            <div class="texto">
+                Tienda <br />
+                de ropa <br />
+                super cool
             </div>
-        </header>
-        <main>
-            <div class="portada">
-                <a class ="categoria_portada" href="index.html"><img src="Imagenes\banner.jpg" id="imagen_bienvenida" onmouseover="this.width=1310;this.height=590;" onmouseout="this.width=1300;this.height=580;" alt="Imagen de portada" width="1300" height="580"></a>
-                <div class="texto">
-                    Tienda <br/>
-                    de ropa <br/>
-                    super cool
-                </div>
-            </div>
-            <a class ="categoria_portada" href="productos_mujer.html"><img src="Imagenes\categoria_mujer.jpg" onmouseover="this.width=655;this.height=455;" onmouseout="this.width=650;this.height=450;" alt="Imagen de portada" width="650" height="450"></a>
-            <a class ="categoria_portada" href="productos_hombre.html"><img src="Imagenes\categoria_hombre.jpg" onmouseover="this.width=655;this.height=455;" onmouseout="this.width=650;this.height=450;" alt="Imagen de portada" width="650" height="450"></a>
-            
-            <div id = "contenedor">
-            </div>
-        </main>
-        <footer>
-            <div id="pie">
-                <p>Copyright 2021 by Sara Estefania Bermudez Alvarez. All Rights Reserved. <a href="https://www.facebook.com">Facebook</a> <a href="https://www.instagram.com">Instagram</a></p>
-            </div>
-        </footer>
-    </body>
+        </div>
+        <a class="categoria_portada" href="productos_mujer.html"><img src="images/categoria_mujer.jpg"
+                onmouseover="this.width=655;this.height=455;" onmouseout="this.width=650;this.height=450;"
+                alt="Imagen de portada" width="650" height="450"></a>
+        <a class="categoria_portada" href="productos_hombre.html"><img src="images/categoria_hombre.jpg"
+                onmouseover="this.width=655;this.height=455;" onmouseout="this.width=650;this.height=450;"
+                alt="Imagen de portada" width="650" height="450"></a>
+
+        <div id="contenedor">
+        </div>
+    </main>
+    <footer>
+        <div id="pie">
+            <p>Copyright 2021 by Sara Estefania Bermudez Alvarez. All Rights Reserved. <a
+                    href="https://www.facebook.com">Facebook</a> <a href="https://www.instagram.com">Instagram</a></p>
+        </div>
+    </footer>
+</body>
+
 </html>
